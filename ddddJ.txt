@@ -1,0 +1,41 @@
+class table
+{
+public void printtable(int n)
+{
+for (int i=1;i<10;i++);
+{
+try
+{
+Thread.sleep(1000);
+}
+catch(Exception e)
+{
+system.out.println(e)
+}
+system.out.println(i*n);
+}
+}
+}
+class my extends Thread
+{
+table t;
+my(table t)
+{
+this.t=t;
+}
+public void run()
+{
+t.printtable(5);
+}
+}
+class abc
+{
+public static void main(String []args)
+{
+table a=new table();
+my t1=new my();
+my t2=new my();
+t1.start();
+t2.start();
+}
+}
